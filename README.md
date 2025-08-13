@@ -1,6 +1,6 @@
 # Arduino_Solar_Diverter_Plus
 ## A load manager to optimize solar power utilization in a domestic photovoltaic installation
-solarDiverterPlusV3 - 2025.08.12 - by MOL57 - xavierfmol@gmail.com
+_**solarDiverterPlusV3** - 2025.08.12 - by MOL57 -_ xavierfmol@gmail.com
 
 ### Summary
 Solar Diverter Plus is a project to optimize a domestic photovoltaic installation, 
