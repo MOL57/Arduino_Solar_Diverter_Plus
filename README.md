@@ -1,8 +1,8 @@
 # Arduino_Solar_Diverter_Plus
 ## A load manager to optimize solar power utilization in a domestic photovoltaic installation
-### solarDiverterPlus V3 - 2025.08.12 - by MOL57 - xavierfmol@gmail.com
-\
-\
+solarDiverterPlusV3 - 2025.08.12 - by MOL57 - xavierfmol@gmail.com
+
+### Summary
 Solar Diverter Plus is a project to optimize a domestic photovoltaic installation, 
 which measures: 
 - the instantaneous solar power generation
@@ -21,7 +21,7 @@ and consequently switches On or Off certain (possibly remotely managed) critical
 A serial interface for simulation of electric variables is included (for testing without real electric circuit)
 and to print values on demand
 
-The hardware is composed by:
+### The hardware is composed by:
 - an Arduino Mega 2560 board
 - a liquid crystal display of 4 lines x 20 characters with I2C interface
 - a push button to change the screen contents of the display 
@@ -34,13 +34,13 @@ The hardware is composed by:
 - some digital outputs with LEDs to indicate the status of the manage loads (and optially to manage them through wires instead of radio)
 - some switches to select the control of the loads either as solar-automatic or as manual
 
-Hardware schematic in file: [schematics/Schematic-Solar-Diverter-Plus-v02-2025.07.16.pdf](schematics/Schematic-Solar-Diverter-Plus-v02-2025.07.16.pdf)
+Hardware schematic in file: [`Schematic-Solar-Diverter-Plus-v02-2025.07.16.pdf`](schematics/Schematic-Solar-Diverter-Plus-v02-2025.07.16.pdf)
 
-Adaptation to the remote switches used:
-- Radio codes for On and Off of each switch (channel), and their PWM times and parameters, must be cloned and included in file radio.h
+### Adaptation to the remote switches used
+- Radio codes for On and Off of each switch (channel), and their PWM times and parameters, must be cloned and included in file `radio.h`
 - Alternatively, loads can be managed in a wired fashion through their corresponding digital outputs, thus avoiding radio cloning any remote switches
 
-Compatibility:
+### Compatibility
 
 This software + hardware has been designed and tested under the following conditions:
 - Plattform: Arduino Mega 2560
@@ -50,7 +50,7 @@ This software + hardware has been designed and tested under the following condit
 - Maximum power consumption intensity: 25A through an intensity transformer of ratio: 100A / 50mA
 
 To port this software to other processors, take into account:
-- In measure.h, the ADC prescaler must be modified according to the particular ADC registers
+- In `measure.h`, the ADC prescaler must be modified according to the particular ADC registers
   and the conversion time must be lower than 1/4 of the designed sampling interval
 - The assignation of the digital and analog gpios must be revised according to the disponibility of the board
 - RAM and FLASH memory size must be enough. In SW v3 we have: RAM usage: 2442 bytes, FLASH usage: 26778 bytes
@@ -58,4 +58,4 @@ To port this software to other processors, take into account:
 
 To use different electrical parameters:
 - Modify values of electrical components in the schematic, if required.
-- Modify electrical constants in source files (main file and measure.h file)
+- Modify electrical constants in source files (`solarDiverterPlusV3.ino` and `measure.h` files)
